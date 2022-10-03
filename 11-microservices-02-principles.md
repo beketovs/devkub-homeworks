@@ -15,6 +15,29 @@
 
 Обоснуйте свой выбор.
 
+***
+
+Нашел стравнительную таблицу, а также почитал про каждый из API Gateway тут https://www.moesif.com/blog/technical/api-gateways/How-to-Choose-The-Right-API-Gateway-For-Your-Platform-Comparison-Of-Kong-Tyk-Apigee-And-Alternatives/ и тут https://geekflare.com/api-gateway/
+
+
+
+| **Products**           | **Kong**              | **Tyk.io**  | **APIGee**                         | **AWS Gateway**   | **Azure Gateway** | **Express Gateway** |
+| ---------------------- | --------------------- | ----------- | ---------------------------------- | ----------------- | ----------------- | ------------------- |
+| Deployment Complexity  | Single node           | Single node | Many nodes with different roles    | Cloud vendor PaaS | Cloud vendor PaaS | Flexible            |
+| Data Stores Required   | Cassandra or Postgres | Redis       | Cassandra, Zookeeper, and Postgres | Cloud vendor PaaS | Cloud vendor PaaS | Redis               |
+| Open Source            | Yes, Apache 2.0       | Yes, MPL    | No                                 | No                | No                | Yes, Apache 2.0     |
+| Core Technology        | NGINX/Lua             | GoLang      | Java                               | Not open          | Not open          | Node.js Express     |
+| On Premise             | Yes                   | Yes         | Yes                                | No                | Mo                | Yes                 |
+| Community/Extensions   | Large                 | Medium      | No                                 | No                | No                | Small               |
+| Authorization/API Keys | Yes                   | Yes         | Yes                                | Yes               | Yes               | Yes                 |
+| Rate Limiting          | Yes                   | Yes         | Yes                                | Yes               | Yes               | Yes                 |
+| Data Transformation    | HTTP                  | HTTP        | Yes                                | No                | No                | No                  |
+| Integrated Billing     | No                    | No          | Yes                                | No                | No                | No                  |
+
+Основной функционал в API Gateway схож и имеется во всех вариантах. Я бы предложил остановиться на более популярных решениях, с открытым исходным кодом и имеющую большую поддержку community. Свой выбор я бы остановил на Kong.
+
+***
+
 ## Задача 2: Брокер сообщений
 
 Составьте таблицу возможностей различных брокеров сообщений. На основе таблицы сделайте обоснованный выбор решения.
