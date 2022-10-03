@@ -57,16 +57,14 @@
 
 | **Products**           | **RabbitMQ**              | **ActiveMQ**  | **Qpid C++**                         | **SwiftMQ**   | **Artemis** | **Apollo** |
 | ---------------------- | --------------------- | ----------- | ---------------------------------- | ----------------- | ----------------- | ------------------- |
-| Deployment Complexity  | Single node           | Single node | Many nodes with different roles    | Cloud vendor PaaS | Cloud vendor PaaS | Flexible            |
-| Data Stores Required   | Cassandra or Postgres | Redis       | Cassandra, Zookeeper, and Postgres | Cloud vendor PaaS | Cloud vendor PaaS | Redis               |
-| Open Source            | Yes, Apache 2.0       | Yes, MPL    | No                                 | No                | No                | Yes, Apache 2.0     |
-| Core Technology        | NGINX/Lua             | GoLang      | Java                               | Not open          | Not open          | Node.js Express     |
-| On Premise             | Yes                   | Yes         | Yes                                | No                | Mo                | Yes                 |
-| Community/Extensions   | Large                 | Medium      | No                                 | No                | No                | Small               |
-| Authorization/API Keys | Yes                   | Yes         | Yes                                | Yes               | Yes               | Yes                 |
-| Rate Limiting          | Yes                   | Yes         | Yes                                | Yes               | Yes               | Yes                 |
-| Data Transformation    | HTTP                  | HTTP        | Yes                                | No                | No                | No                  |
-| Integrated Billing     | No                    | No          | Yes                                | No                | No                | No                  |
+| Кластеризация  | +          | +  | +     | +  | +  | -            |
+| Хранение сообщений   | +  | +        | +  | +  | +  | +                |
+| Скорость работы            | +        | -    | -                                | -               | -                | -    |
+| Поддержка различных форматов        | +             | -      | -                               | -        | -          | -     |
+| Права доступа             | +                   | +         | +                                | +                | +                | +                 |
+| Простота эксплуатации   | +                 | +      | -                                 | -                | +                | +               |
+
+На мой взгляд самым лучшим вариантом будет использования в качестве брокера сообщений RabitMQ. Он гибкий, имеет огромное количество статей и большую популярность, а самое главное, что успешно вписывается в любую архитектуру и очень хорошо масштабируем под любую нагрузку.
 
 ***
 
