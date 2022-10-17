@@ -120,6 +120,19 @@ hello-node   1/1     1            1           28s
 Подготовить рабочую машину для управления корпоративным кластером. Установить клиентское приложение kubectl.
 - подключиться к minikube 
 - проверить работу приложения из задания 2, запустив port-forward до кластера
+  
+***
+```
+beketov@beketovs-MacBook-Pro devkub-homeworks % kubectl version
+WARNING: This version information is deprecated and will be replaced with the output from kubectl version --short.  Use --output=yaml|json to get the full version.
+Client Version: version.Info{Major:"1", Minor:"25", GitVersion:"v1.25.0", GitCommit:"a866cbe2e5bbaa01cfd5e969aa3e033f3282a8a2", GitTreeState:"clean", BuildDate:"2022-08-23T17:44:59Z", GoVersion:"go1.19", Compiler:"gc", Platform:"darwin/amd64"}
+Kustomize Version: v4.5.7
+Server Version: version.Info{Major:"1", Minor:"25", GitVersion:"v1.25.2", GitCommit:"5835544ca568b757a8ecae5c153f317e5736700e", GitTreeState:"clean", BuildDate:"2022-09-21T14:27:13Z", GoVersion:"go1.19.1", Compiler:"gc", Platform:"linux/amd64"}
+```
+<img width="1437" alt="Screen Shot 2022-10-18 at 01 50 55" src="https://user-images.githubusercontent.com/36231585/196290811-99317578-5213-45e4-a170-8ea113512f70.png">
+
+  
+***
 
 ## Задача 4 (*): собрать через ansible (необязательное)
 
