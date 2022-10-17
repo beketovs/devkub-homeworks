@@ -29,6 +29,36 @@
 Инструкция по установке Minikube - [ссылка](https://kubernetes.io/ru/docs/tasks/tools/install-minikube/)
 
 **Важно**: t3.small не входит во free tier, следите за бюджетом аккаунта и удаляйте виртуалку.
+  
+  ***
+  
+  Установил minikube на своем Mac:
+  
+  ```
+  beketov@beketovs-MacBook-Pro repo_netology % minikube version
+minikube version: v1.27.1
+commit: fe869b5d4da11ba318eb84a3ac00f336411de7ba
+
+  beketov@beketovs-MacBook-Pro repo_netology % minikube status
+minikube
+type: Control Plane
+host: Running
+kubelet: Running
+apiserver: Running
+kubeconfig: Configured
+  
+  beketov@beketovs-MacBook-Pro ~ % kubectl get pods --namespace=kube-system
+NAME                               READY   STATUS    RESTARTS   AGE
+coredns-565d847f94-mg7c9           1/1     Running   0          50m
+etcd-minikube                      1/1     Running   0          50m
+kube-apiserver-minikube            1/1     Running   0          50m
+kube-controller-manager-minikube   1/1     Running   0          50m
+kube-proxy-x7nbm                   1/1     Running   0          50m
+kube-scheduler-minikube            1/1     Running   0          50m
+storage-provisioner                1/1     Running   0          50m
+  ```
+  
+***
 
 ## Задача 2: Запуск Hello World
 После установки Minikube требуется его проверить. Для этого подойдет стандартное приложение hello world. А для доступа к нему потребуется ingress.
