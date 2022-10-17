@@ -66,7 +66,8 @@ storage-provisioner                1/1     Running   0          50m
 - установить аддоны ingress и dashboard
 
   ***
-  ```
+  
+```
   beketov@beketovs-MacBook-Pro devkub-homeworks % minikube addons list          
 |-----------------------------|----------|--------------|--------------------------------|
 |         ADDON NAME          | PROFILE  |    STATUS    |           MAINTAINER           |
@@ -110,8 +111,9 @@ storage-provisioner                1/1     Running   0          50m
 NAME         READY   UP-TO-DATE   AVAILABLE   AGE
 hello-node   1/1     1            1           28s
   
-  ```
-  ***
+```
+  
+***
   
 ## Задача 3: Установить kubectl
 
