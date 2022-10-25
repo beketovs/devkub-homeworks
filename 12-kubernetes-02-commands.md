@@ -36,7 +36,7 @@ hello-node-697897c86-ssvgg   1/1     Running   0          68s
 
 ***
 ```
-beketov@beketovs-MacBook-Pro ~ % kubectl config view
+beketov@beketovs-MacBook-Pro cert % kubectl config view
 apiVersion: v1
 clusters:
 - cluster:
@@ -52,6 +52,10 @@ clusters:
 contexts:
 - context:
     cluster: minikube
+    user: beketov
+  name: beketov-context
+- context:
+    cluster: minikube
     extensions:
     - extension:
         last-update: Tue, 25 Oct 2022 19:06:30 +04
@@ -65,6 +69,10 @@ current-context: minikube
 kind: Config
 preferences: {}
 users:
+- name: beketov
+  user:
+    client-certificate: /Users/beketov/cert/beketov_minikube.crt
+    client-key: /Users/beketov/cert/beketov_minikube.key
 - name: minikube
   user:
     client-certificate: /Users/beketov/.minikube/profiles/minikube/client.crt
