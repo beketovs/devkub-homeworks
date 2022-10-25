@@ -34,6 +34,44 @@ hello-node-697897c86-ssvgg   1/1     Running   0          68s
  * пользователь может просматривать логи подов и их конфигурацию (kubectl logs pod <pod_id>, kubectl describe pod <pod_id>)
 
 
+***
+```
+beketov@beketovs-MacBook-Pro ~ % kubectl config view
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /Users/beketov/.minikube/ca.crt
+    extensions:
+    - extension:
+        last-update: Tue, 25 Oct 2022 19:06:30 +04
+        provider: minikube.sigs.k8s.io
+        version: v1.27.1
+      name: cluster_info
+    server: https://127.0.0.1:51436
+  name: minikube
+contexts:
+- context:
+    cluster: minikube
+    extensions:
+    - extension:
+        last-update: Tue, 25 Oct 2022 19:06:30 +04
+        provider: minikube.sigs.k8s.io
+        version: v1.27.1
+      name: context_info
+    namespace: default
+    user: minikube
+  name: minikube
+current-context: minikube
+kind: Config
+preferences: {}
+users:
+- name: minikube
+  user:
+    client-certificate: /Users/beketov/.minikube/profiles/minikube/client.crt
+    client-key: /Users/beketov/.minikube/profiles/minikube/client.key
+```
+***
+
 ## Задание 3: Изменение количества реплик 
 Поработав с приложением, вы получили запрос на увеличение количества реплик приложения для нагрузки. Необходимо изменить запущенный deployment, увеличив количество реплик до 5. Посмотрите статус запущенных подов после увеличения реплик. 
 
