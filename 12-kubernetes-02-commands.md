@@ -11,6 +11,18 @@
  * наличие deployment можно проверить командой kubectl get deployment
  * наличие подов можно проверить командой kubectl get pods
 
+***
+```
+beketov@beketovs-MacBook-Pro ~ % k get deployments.apps            
+NAME         READY   UP-TO-DATE   AVAILABLE   AGE
+hello-node   2/2     2            2           63s
+beketov@beketovs-MacBook-Pro ~ % k get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+hello-node-697897c86-k8bm5   1/1     Running   0          7s
+hello-node-697897c86-ssvgg   1/1     Running   0          68s
+```
+***
+
 
 ## Задание 2: Просмотр логов для разработки
 Разработчикам крайне важно получать обратную связь от штатно работающего приложения и, еще важнее, об ошибках в его работе. 
