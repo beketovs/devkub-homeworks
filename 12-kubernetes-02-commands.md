@@ -41,6 +41,18 @@ hello-node-697897c86-ssvgg   1/1     Running   0          68s
  * в deployment из задания 1 изменено количество реплик на 5
  * проверить что все поды перешли в статус running (kubectl get pods)
 
+***
+```
+beketov@beketovs-MacBook-Pro ~ % k get pods
+NAME                         READY   STATUS    RESTARTS   AGE
+hello-node-697897c86-bcdd4   1/1     Running   0          3s
+hello-node-697897c86-gk4lk   1/1     Running   0          3s
+hello-node-697897c86-k8bm5   1/1     Running   0          2m48s
+hello-node-697897c86-ssvgg   1/1     Running   0          3m49s
+hello-node-697897c86-t7xpn   1/1     Running   0          3s
+```
+***
+
 ---
 
 ### Как оформить ДЗ?
