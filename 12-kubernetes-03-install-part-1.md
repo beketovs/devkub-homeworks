@@ -40,6 +40,6 @@
 
 Итого:
 8 ВМ, из которых 3 master node - cpu – 2 cpu,  2 Гб ОЗУ, HDD – 50Гб
-И 5 ВМ под worker node - 5 cpu, 10 Гб ОЗУ ,  HDD - 60 Гб
+и 5 ВМ под worker node - 5 cpu, 10 Гб ОЗУ ,  HDD - 60 Гб
 
 ***
