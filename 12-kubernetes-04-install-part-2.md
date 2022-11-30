@@ -8,6 +8,7 @@
 * запуск etcd производить на мастере.
 
 ***
+```
 root@master1:/etc/kubernetes# kubectl get nodes
 NAME      STATUS   ROLES           AGE   VERSION
 master1   Ready    control-plane   26m   v1.25.4
@@ -28,7 +29,7 @@ root@master1:/etc/kubernetes# systemctl status etcd
      CGroup: /system.slice/etcd.service
              └─1061699 /usr/local/bin/etcd
 
-
+```
 ***
 
 ## Задание 2 (*): подготовить и проверить инвентарь для кластера в AWS
