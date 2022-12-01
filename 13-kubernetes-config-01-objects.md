@@ -7,6 +7,24 @@
 * регулируется с помощью deployment фронтенд и бекенд;
 * база данных — через statefulset.
 
+***
+[stage.yaml](https://link-url-here.org)
+
+```
+root@master1:/home/beketov/mymanifests# k get pods
+NAME                          READY   STATUS    RESTARTS   AGE
+front-back-6fd764f75d-4jrcx   2/2     Running   0          46s
+postgres-0                    1/1     Running   0          46s
+root@master1:/home/beketov/mymanifests# k get svc
+NAME         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+front-svc    NodePort    10.233.40.125   <none>        80:30080/TCP   48s
+kubernetes   ClusterIP   10.233.0.1      <none>        443/TCP        47h
+root@master1:/home/beketov/mymanifests# k get statefulsets.apps 
+NAME       READY   AGE
+postgres   1/1     56s
+```
+***
+
 ## Задание 2: подготовить конфиг для production окружения
 Следующим шагом будет запуск приложения в production окружении. Требования сложнее:
 * каждый компонент (база, бекенд, фронтенд) запускаются в своем поде, регулируются отдельными deployment’ами;
