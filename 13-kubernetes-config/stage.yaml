@@ -1,0 +1,61 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-back
+  labels:
+    app: fb-app
+spec:
+  selector:
+    matchLabels:
+      app: fb-app
+  template:
+    metadata:
+      labels:
+        app: fb-app
+    spec:
+      containers:
+      - name: front
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+      - name: back
+        image: beketov/pythonapp
+        ports:
+        - containerPort: 9000
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres
+spec:
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:13-alpine
+        env:
+        - name: POSTGRES_PASSWORD
+          value: postgres
+        - name: POSTGRES_USER
+          value: postgres
+        - name: POSTGRES_DB
+          value: news
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: front-svc
+  labels:
+    app: fb-app
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    nodePort: 30080
