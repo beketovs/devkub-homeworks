@@ -8,7 +8,7 @@
 * база данных — через statefulset.
 
 ***
-[stage.yaml]([https://link-url-here.org](https://github.com/beketovs/devkub-homeworks/blob/main/13-kubernetes-config/stage.yaml))
+[stage.yaml](https://link-url-here.org](https://github.com/beketovs/devkub-homeworks/blob/main/13-kubernetes-config/stage.yaml)
 
 ```
 root@master1:/home/beketov/mymanifests# k get pods
