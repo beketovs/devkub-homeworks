@@ -24,13 +24,30 @@ NAME       READY   AGE
 postgres   1/1     56s
 ```
 ***
-
+[prod.yaml](https://github.com/beketovs/devkub-homeworks/blob/main/13-kubernetes-config/prod.yaml)
 ## Задание 2: подготовить конфиг для production окружения
 Следующим шагом будет запуск приложения в production окружении. Требования сложнее:
 * каждый компонент (база, бекенд, фронтенд) запускаются в своем поде, регулируются отдельными deployment’ами;
 * для связи используются service (у каждого компонента свой);
 * в окружении фронта прописан адрес сервиса бекенда;
 * в окружении бекенда прописан адрес сервиса базы данных.
+
+***
+
+```
+root@master1:/home/beketov/mymanifests# k get pods
+NAME                     READY   STATUS    RESTARTS   AGE
+back-655c6949bb-rzmpq    1/1     Running   0          43s
+front-685c5db79b-ghlhx   1/1     Running   0          43s
+postgres-0               1/1     Running   0          43s
+root@master1:/home/beketov/mymanifests# k get svc
+NAME           TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+back-svc       ClusterIP   10.233.34.139   <none>        9000/TCP       49s
+front-svc      NodePort    10.233.43.56    <none>        80:30080/TCP   49s
+kubernetes     ClusterIP   10.233.0.1      <none>        443/TCP        2d
+postgres-svc   ClusterIP   10.233.1.185    <none>        5432/TCP       49s
+```
+***
 
 ## Задание 3 (*): добавить endpoint на внешний ресурс api
 Приложению потребовалось внешнее api, и для его использования лучше добавить endpoint в кластер, направленный на это api. Требования:
