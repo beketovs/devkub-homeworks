@@ -19,6 +19,9 @@ spec:
         image: nginx:latest
         ports:
         - containerPort: 80
+        env:
+        - name: ADDRESS_BACKEND
+          value: back-svc
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -40,6 +43,9 @@ spec:
         image: beketov/pythonapp
         ports:
         - containerPort: 9000
+        env:
+        - name: ADDRESS_DB
+          value: postgres-svc
 ---
 apiVersion: apps/v1
 kind: StatefulSet
